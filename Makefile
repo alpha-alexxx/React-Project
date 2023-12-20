@@ -1,6 +1,8 @@
 git-config:
-	git config --global user.name 'Ankit Kumar'
-	git config --global user.email 'ankithome8@gmail.com'
+	@read -p "Enter config name: " name; \
+	git config --global user.name "$$name"
+	@read -p "Enter config email: " email; \
+	git config --global user.email "$$email"
 
 commit:
 	@read -p "Enter commit message: " message; \
